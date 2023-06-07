@@ -1,0 +1,22 @@
+{
+  "name": "aws-sqs-offline",
+  "version": "1.0.0",
+  "description": "https://devpress.csdn.net/cloudnative/62f50648c6770329307fb0a8.html",
+  "main": "handler.js",
+  "scripts": {
+    "serverless-offline": "sls offline start",
+    "queue-start": "java -Dconfig.file=elasticmq.config -jar .elasticmq/elasticmq-server-0.15.4.jar",
+    "start": "concurrently --kill-others \"npm run queue-start\" \"npm run serverless-offline\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.1.0",
+    "serverless-offline": "^12.0.4",
+    "serverless-offline-sqs": "^7.3.2"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1392.0"
+  }
+}
