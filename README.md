@@ -1,3 +1,4 @@
+
 ## Ejecución del proyecto
 * git clone repo
 * npm i -g serverless
@@ -8,6 +9,8 @@
 curl --location 'http://localhost:4000/dev/sender-queue/' \
 --header 'x-api-key: f98d8cd98h73s204e3456998ecl9427j'
 ```
+* Resultado desde consola (QueueSendMessage y  QueueReceiveMessage)
+![Index app](./doc/senderReceiver.png)
 
 ## Comandos
 * Iniciar solo servicio elasticmq
