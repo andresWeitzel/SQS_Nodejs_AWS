@@ -3,6 +3,7 @@
 * git clone repo
 * npm i -g serverless
 * npm i
+* npx kill-port 9324 (si tenemos otro/s proceso/s en este puerto)
 * npm start
 * Ejecutamos el siguiente endpoint de tipo POST con postman 
 ```git
