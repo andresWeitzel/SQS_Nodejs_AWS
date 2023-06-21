@@ -17,9 +17,6 @@ plugins:
   - serverless-offline  
 
 functions:
-  hello:
-    handler: handler.hello
-
   QueueSendMessage:
     handler: handler.sendMessage
     name: Queue-SendMessage-Lambda
