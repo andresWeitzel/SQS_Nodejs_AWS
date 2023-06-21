@@ -19,7 +19,20 @@ module.exports.sendMessage = async (event) => {
     }
 
     const result = await SQS.sendMessageBatch(queueParams).promise();
-    console.log(JSON.stringify(result, null, 2));
+    let bodyResponse = JSON.stringify(result, null, 2)
+
+    console.log(bodyResponse);
+    if(result != null){
+      return {
+        statusCode: 200,
+        body: bodyResponse
+          }
+    }else{
+      return {
+        statusCode: 400,
+        body: 'Bad request'
+          }
+    }
   } catch (e) {
     console.error(e);
   }
